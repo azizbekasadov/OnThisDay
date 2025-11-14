@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24299" systemVersion="25A362" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="DayDataEntity" representedClassName="DayDataEntity" syncable="YES">
+        <attribute name="identifier" attributeType="String"/>
+        <relationship name="day" maxCount="1" deletionRule="Nullify" destinationEntity="DayEntity" inverseName="data" inverseEntity="DayEntity"/>
+        <relationship name="events" toMany="YES" deletionRule="Nullify" destinationEntity="EventEntity" inverseName="dayDataEntity" inverseEntity="EventEntity"/>
+    </entity>
+    <entity name="DayEntity" representedClassName="DayEntity" syncable="YES">
+        <attribute name="date" attributeType="String"/>
+        <relationship name="data" toMany="YES" deletionRule="Nullify" destinationEntity="DayDataEntity" inverseName="day" inverseEntity="DayDataEntity"/>
+    </entity>
+    <entity name="EventEntity" representedClassName="EventEntity" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="text" attributeType="String"/>
+        <attribute name="year" attributeType="String"/>
+        <relationship name="dayDataEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayDataEntity" inverseName="events" inverseEntity="DayDataEntity"/>
+        <relationship name="links" toMany="YES" deletionRule="Nullify" destinationEntity="EventLinkEntity" inverseName="event" inverseEntity="EventLinkEntity"/>
+    </entity>
+    <entity name="EventLinkEntity" representedClassName="EventLinkEntity" syncable="YES">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="url" attributeType="URI"/>
+        <relationship name="event" maxCount="1" deletionRule="Nullify" destinationEntity="EventEntity" inverseName="links" inverseEntity="EventEntity"/>
+    </entity>
+</model>

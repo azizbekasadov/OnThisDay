@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5DAC90562EC74A5200F36608 /* OTDNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 5DAC90552EC74A5200F36608 /* OTDNetwork */; };
+		5DAC908F2EC7725E00F36608 /* OTDStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5DAC908E2EC7725E00F36608 /* OTDStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5D389F1D2EC74373005EAE46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		5D389F0D2EC74371005EAE46 /* OnThisDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnThisDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D389F1C2EC74373005EAE46 /* OnThisDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnThisDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D389F262EC74373005EAE46 /* OnThisDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnThisDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DAC90522EC74A3E00F36608 /* OTDNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OTDNetwork; path = ../OTDNetwork; sourceTree = SOURCE_ROOT; };
+		5DAC908C2EC7720800F36608 /* OTDStorage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OTDStorage; path = ../OTDStorage; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DAC908F2EC7725E00F36608 /* OTDStorage in Frameworks */,
+				5DAC90562EC74A5200F36608 /* OTDNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +84,7 @@
 		5D389F042EC74371005EAE46 = {
 			isa = PBXGroup;
 			children = (
+				5DAC90532EC74A4300F36608 /* Dependencies */,
 				5D389F0F2EC74371005EAE46 /* OnThisDay */,
 				5D389F1F2EC74373005EAE46 /* OnThisDayTests */,
 				5D389F292EC74373005EAE46 /* OnThisDayUITests */,
@@ -90,6 +100,15 @@
 				5D389F262EC74373005EAE46 /* OnThisDayUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5DAC90532EC74A4300F36608 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				5DAC908C2EC7720800F36608 /* OTDStorage */,
+				5DAC90522EC74A3E00F36608 /* OTDNetwork */,
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +131,8 @@
 			);
 			name = OnThisDay;
 			packageProductDependencies = (
+				5DAC90552EC74A5200F36608 /* OTDNetwork */,
+				5DAC908E2EC7725E00F36608 /* OTDStorage */,
 			);
 			productName = OnThisDay;
 			productReference = 5D389F0D2EC74371005EAE46 /* OnThisDay.app */;
@@ -195,6 +216,10 @@
 			);
 			mainGroup = 5D389F042EC74371005EAE46;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5DAC90542EC74A5200F36608 /* XCLocalSwiftPackageReference "../OTDNetwork" */,
+				5DAC908D2EC7725E00F36608 /* XCLocalSwiftPackageReference "../OTDStorage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5D389F0E2EC74371005EAE46 /* Products */;
 			projectDirPath = "";
@@ -400,15 +425,28 @@
 				DEVELOPMENT_TEAM = 7FCTC6DRE7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daisy - Event of the Day";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.azizbekasadov.OnThisDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -432,15 +470,28 @@
 				DEVELOPMENT_TEAM = 7FCTC6DRE7;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Daisy - Event of the Day";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.azizbekasadov.OnThisDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -573,6 +624,28 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5DAC90542EC74A5200F36608 /* XCLocalSwiftPackageReference "../OTDNetwork" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../OTDNetwork;
+		};
+		5DAC908D2EC7725E00F36608 /* XCLocalSwiftPackageReference "../OTDStorage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../OTDStorage;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DAC90552EC74A5200F36608 /* OTDNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OTDNetwork;
+		};
+		5DAC908E2EC7725E00F36608 /* OTDStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = OTDStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D389F052EC74371005EAE46 /* Project object */;
 }
