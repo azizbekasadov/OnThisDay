@@ -10,6 +10,7 @@ import OTDNetwork
 
 @main
 struct OnThisDayApp: App {
+    @AppStorage(kDisplayMode) private var displayMode: DisplayMode = .auto
     
     // TODO: Replace with DI Container later
     
@@ -31,6 +32,16 @@ struct OnThisDayApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(appState)
+                .onAppear {
+                    AppTheme.changeDisplayMode(to: displayMode)
+                }
+                .onChange(of: displayMode) { _, newValue in
+                    AppTheme.changeDisplayMode(to: newValue)
+                }
         }
+        .commands {
+            Menus()
+        }
+        
     }
 }

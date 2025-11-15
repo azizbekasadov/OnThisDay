@@ -9,6 +9,9 @@ import SwiftUI
 import Foundation
 
 struct SidebarView: View {
+    @EnvironmentObject private var appState: AppState
+    @AppStorage(kShowTotalsMainView) private var showTotals: Bool = true
+    
     private let eventTypes: [EventType] = [
         .events, .deaths, .births
     ]
@@ -21,6 +24,7 @@ struct SidebarView: View {
                 ForEach(eventTypes, id: \.self) { eventType in
                     Text(eventType.rawValue)
                         .padding(.vertical, 3)
+                        .badge(showTotals ? appState.count(for: eventType) : 0)
                 }
             }
         }
