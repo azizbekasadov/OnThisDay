@@ -9,9 +9,12 @@ import Foundation
 
 // MARK: - @AppStorage Keys
 let kShowTotalsMainView = "showTotals"
+let kShowBirths = "showBirths"
+let kShowDeaths = "showDeaths"
 let kDisplayMode = "displayMode"
 
 // MARK: - @SceneStorage Keys
 let kEventType = "eventType"
 let kSearchText = "searchText"
 let kViewMode = "viewMode"
+let kSelectedDate = "selectedDate"

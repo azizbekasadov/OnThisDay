@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D389F0D2EC74371005EAE46 /* OnThisDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnThisDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D389F0D2EC74371005EAE46 /* Daisy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daisy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D389F1C2EC74373005EAE46 /* OnThisDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnThisDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D389F262EC74373005EAE46 /* OnThisDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnThisDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC90522EC74A3E00F36608 /* OTDNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = OTDNetwork; path = ../OTDNetwork; sourceTree = SOURCE_ROOT; };
@@ -95,7 +95,7 @@
 		5D389F0E2EC74371005EAE46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D389F0D2EC74371005EAE46 /* OnThisDay.app */,
+				5D389F0D2EC74371005EAE46 /* Daisy.app */,
 				5D389F1C2EC74373005EAE46 /* OnThisDayTests.xctest */,
 				5D389F262EC74373005EAE46 /* OnThisDayUITests.xctest */,
 			);
@@ -114,9 +114,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5D389F0C2EC74371005EAE46 /* OnThisDay */ = {
+		5D389F0C2EC74371005EAE46 /* Daisy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D389F302EC74373005EAE46 /* Build configuration list for PBXNativeTarget "OnThisDay" */;
+			buildConfigurationList = 5D389F302EC74373005EAE46 /* Build configuration list for PBXNativeTarget "Daisy" */;
 			buildPhases = (
 				5D389F092EC74371005EAE46 /* Sources */,
 				5D389F0A2EC74371005EAE46 /* Frameworks */,
@@ -129,13 +129,13 @@
 			fileSystemSynchronizedGroups = (
 				5D389F0F2EC74371005EAE46 /* OnThisDay */,
 			);
-			name = OnThisDay;
+			name = Daisy;
 			packageProductDependencies = (
 				5DAC90552EC74A5200F36608 /* OTDNetwork */,
 				5DAC908E2EC7725E00F36608 /* OTDStorage */,
 			);
 			productName = OnThisDay;
-			productReference = 5D389F0D2EC74371005EAE46 /* OnThisDay.app */;
+			productReference = 5D389F0D2EC74371005EAE46 /* Daisy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5D389F1B2EC74373005EAE46 /* OnThisDayTests */ = {
@@ -225,7 +225,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5D389F0C2EC74371005EAE46 /* OnThisDay */,
+				5D389F0C2EC74371005EAE46 /* Daisy */,
 				5D389F1B2EC74373005EAE46 /* OnThisDayTests */,
 				5D389F252EC74373005EAE46 /* OnThisDayUITests */,
 			);
@@ -283,12 +283,12 @@
 /* Begin PBXTargetDependency section */
 		5D389F1E2EC74373005EAE46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5D389F0C2EC74371005EAE46 /* OnThisDay */;
+			target = 5D389F0C2EC74371005EAE46 /* Daisy */;
 			targetProxy = 5D389F1D2EC74373005EAE46 /* PBXContainerItemProxy */;
 		};
 		5D389F282EC74373005EAE46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5D389F0C2EC74371005EAE46 /* OnThisDay */;
+			target = 5D389F0C2EC74371005EAE46 /* Daisy */;
 			targetProxy = 5D389F272EC74373005EAE46 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D389F302EC74373005EAE46 /* Build configuration list for PBXNativeTarget "OnThisDay" */ = {
+		5D389F302EC74373005EAE46 /* Build configuration list for PBXNativeTarget "Daisy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D389F312EC74373005EAE46 /* Debug */,

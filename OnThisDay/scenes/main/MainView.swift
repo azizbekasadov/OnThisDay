@@ -13,8 +13,14 @@ struct MainView: View {
     @State private var searchText: String = ""
     @State private var viewMode: ViewMode = .grid
     
+    @SceneStorage(kSelectedDate) var selectedDate: String?
+    
     private var events: [Event] {
-        appState.dataFor(eventType: sidebarEventTypeSelection, searchText: searchText)
+        appState.dataFor(
+            eventType: sidebarEventTypeSelection,
+            date: selectedDate,
+            searchText: searchText
+        )
     }
     
     var body: some View {
@@ -49,8 +55,8 @@ struct MainView: View {
     }
     
     private var navigationTitle: String {
-        if let eventType = sidebarEventTypeSelection {
-            return "On This Day - \(eventType.rawValue)"
+        if let eventType = sidebarEventTypeSelection, let selectedDate {
+            return "On This Day - \(selectedDate) - \(eventType.rawValue)"
         }
         
         return "On This Day" + " - " + Date().formatted(date: .abbreviated, time: .shortened)

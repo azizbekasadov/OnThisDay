@@ -22,6 +22,8 @@ struct Menus: Commands {
             .keyboardShortcut("/", modifiers: [.command])
         }
         
+        CommandGroup(replacing: .help) {}
+        
         CommandMenu("Display") {
             Toggle(isOn: $showTotals) {
                 Text("Show Totals")
@@ -37,6 +39,8 @@ struct Menus: Commands {
                 }
             }
         }
+        
+        
     }
     
     private func showAPIWebSite() {

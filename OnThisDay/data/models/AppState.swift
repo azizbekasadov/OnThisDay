@@ -156,6 +156,7 @@ final class AppState: ObservableObject {
     
     /// Method to trigger the download for a date if that date was requested but is not available.
     /// - Parameter date: display date for the specific date  e.g. "June 29".
+    @MainActor
     func downloadMissingEvents(for date: String) {
         if isLoading {
             return

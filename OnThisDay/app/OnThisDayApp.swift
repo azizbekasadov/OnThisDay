@@ -43,5 +43,8 @@ struct OnThisDayApp: App {
             Menus()
         }
         
+        Settings {
+            PreferencesView()
+        }
     }
 }

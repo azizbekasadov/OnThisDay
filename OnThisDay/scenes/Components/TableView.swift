@@ -46,6 +46,7 @@ struct TableView: View {
                     Text($0.text)
                 }
             }
+            .tableStyle(.inset)
             
             SideEventDetailsView()
         }
