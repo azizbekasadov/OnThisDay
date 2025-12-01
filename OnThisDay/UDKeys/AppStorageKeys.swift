@@ -7,5 +7,11 @@
 
 import Foundation
 
+// MARK: - @AppStorage Keys
 let kShowTotalsMainView = "showTotals"
 let kDisplayMode = "displayMode"
+
+// MARK: - @SceneStorage Keys
+let kEventType = "eventType"
+let kSearchText = "searchText"
+let kViewMode = "viewMode"

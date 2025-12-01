@@ -11,6 +11,7 @@ struct MainView: View {
     @EnvironmentObject private var appState: AppState
     @State private var sidebarEventTypeSelection: EventType? = .events
     @State private var searchText: String = ""
+    @State private var viewMode: ViewMode = .grid
     
     private var events: [Event] {
         appState.dataFor(eventType: sidebarEventTypeSelection, searchText: searchText)
@@ -20,7 +21,12 @@ struct MainView: View {
         NavigationSplitView {
             SidebarView(selectionType: $sidebarEventTypeSelection)
         } detail: {
-            GridView(event: events)
+            switch viewMode {
+            case .grid:
+                GridView(event: events)
+            case .table:
+                TableView(tableData: events)
+            }
         }
         .navigationTitle(navigationTitle)
         .frame(
@@ -32,8 +38,13 @@ struct MainView: View {
             maxHeight: .infinity
         )
         .searchable(text: $searchText)
+        .onAppear {
+            if sidebarEventTypeSelection == nil {
+                sidebarEventTypeSelection = .events
+            }
+        }
         .toolbar(id: "OTDToolbar") {
-            OTDToolbar()
+            OTDToolbar(viewMode: $viewMode)
         }
     }
     
