@@ -10,8 +10,9 @@ import SwiftUI
 
 enum AppTheme {
     static func changeDisplayMode(to mode: DisplayMode) {
-        @AppStorage("displayMode") var displayMode = DisplayMode.auto
+        @AppStorage(kDisplayMode) var displayMode = DisplayMode.auto
         displayMode = mode
+        
         switch mode {
         case .light:
             NSApp.appearance = NSAppearance(named: .aqua)
