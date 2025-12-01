@@ -10,9 +10,10 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject private var appState: AppState
     @State private var sidebarEventTypeSelection: EventType? = .events
+    @State private var searchText: String = ""
     
     private var events: [Event] {
-        appState.dataFor(eventType: sidebarEventTypeSelection)
+        appState.dataFor(eventType: sidebarEventTypeSelection, searchText: searchText)
     }
     
     var body: some View {
@@ -30,6 +31,10 @@ struct MainView: View {
             idealHeight: 800,
             maxHeight: .infinity
         )
+        .searchable(text: $searchText)
+        .toolbar(id: "OTDToolbar") {
+            OTDToolbar()
+        }
     }
     
     private var navigationTitle: String {

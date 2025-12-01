@@ -13,13 +13,6 @@ protocol DayDataSourceRepositoryProto {
 }
 
 final class DayDataSourceRepository: DayDataSourceRepositoryProto {
-    enum SourceType {
-        case remote
-        case local
-    }
-    
-    private var sourceType: SourceType = .local
-    
     private let remote: DayDataSource
     private let local: DayDataSource
     
